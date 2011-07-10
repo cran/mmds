@@ -1,12 +1,14 @@
-\name{reparam.pi}
-\alias{reparam.pi}
+\name{inv.reparam.pi}
+\alias{inv.reparam.pi}
 \title{Reparametrize mixture proportions}
 \usage{
-  reparam.pi(thetas)
+  inv.reparam.pi(mix.prop, lastpar = FALSE)
 }
 \arguments{
-  \item{thetas}{Mixture proportions in their
-  parametrisation for optimization.}
+  \item{mix.prop}{A set of mixture proportions.}
+
+  \item{lastpar}{Is the last parameter provided, i.e. does
+  sum(mix.prop)=1?}
 }
 \value{
   a vector of parameters
@@ -34,6 +36,6 @@ reparam.pi(inv.reparam.pi(c(0.3,0.4,0.1),lastpar=TRUE))
   distance sampling detection functions.
 }
 \seealso{
-  inv.reparam.pi
+  reparam.pi
 }
 

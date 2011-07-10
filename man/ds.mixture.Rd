@@ -2,41 +2,52 @@
 \alias{ds.mixture}
 \title{A fitted Mixture Model Detection Function Object}
 \description{
-The fitted mixture model detection function object returned by \code{\link{fitmix}}. Knowledge of most of this is not useful. Use \code{link{summary.ds.mixture}} for result summaries.}
-\value{A \code{\link{ds.mixture}} object has the following elements:
-   \item{distance}{Vector of distances used in the analysis.}
-   \item{likelihood}{Value of the log-likelihood at the maxima.}
-   \item{pars}{Parmeter estimates. See \code{\link{mmds.pars}} for more information.}
-   \item{mix.terms}{Number of mixture terms fit.}
-   \item{width}{Truncation distance used.}
-   \item{z}{List containing the matrix of covariates used. Output from \code{\link{model.matrix}}.}
-   \item{zdim}{Number of columns of \code{z}. See \code{\link{mmds.pars}} for more information.}
-   \item{hessian}{Hessian matrix at the maxima.}
-   \item{pt}{Logical indicating whether the data were from a point transect survey.}
-   \item{data}{Data frame after truncation}
-   \item{ftype}{Type of detection function.}
-   \item{ctrl.options}{Options passed to \code{\link{optim}}.}
-   \item{showit}{Debug level.}
-   \item{opt.method}{Optimisation method used.}
-   \item{usegrad}{Were analytic gradients used?}
-   \item{model.formula}{Model formula.}
-   \item{mu}{Per-observation effective trip width/effective area of detection.} 
-   \item{pa.vec}{Vector of per-observation detectabilities.}
-   \item{N}{Estimate of N in the covered area (Horvitz-Thompson).}
-   \item{pa}{Average detectability.}
-   \item{pars.se}{Standard errors of the parameters.}
-   \item{N.se}{Standard error of the Horvitz-Thompson estimate of the abundance.}
-   \item{pa.se}{Standard error of the average detectability.}
-   \item{aic}{AIC of the fitted model.}
-   \item{cvm}{Cramer-von Mises GoF test results. List containing: \code{p}, the p-value and \code{W}, the test statistic.}
-   \item{ks}{Kolmogorov-Smirnov test results. List containing: \code{p}, the p-value and \code{Dn}, the test statistic. See \code{\link{mmds.gof}} for more information.}
+  The fitted mixture model detection function object
+  returned by \code{\link{fitmix}}. Knowledge of most of
+  this is not useful. Use \code{link{summary.ds.mixture}}
+  for result summaries.
 }
-\references{ 
-Miller, D.L. and L. Thomas (in prep.). Mixture model distance sampling detection functions.
- }
-\author{David Lawrence Miller}
-\note{
-\code{ds.mixture} objects can be passed to \code{\link{step.ds.mixture}} to select number of mixture components based on AIC score. 
+\section{Details}{
+  A \code{\link{ds.mixture}} object has the following
+  elements: \tabular{ll}{ distance \tab Vector of distances
+  used in the analysis.\cr likelihood \tab Value of the
+  log-likelihood at the maxima.\cr pars \tab Parmeter
+  estimates. See \code{\link{mmds.pars}} for more
+  information.\cr mix.terms \tab Number of mixture terms
+  fit.\cr width \tab Truncation distance used.\cr z \tab
+  List containing the matrix of covariates used. Output
+  from \code{\link{model.matrix}}.\cr zdim \tab Number of
+  columns of \code{z}. See \code{\link{mmds.pars}} for more
+  information.\cr hessian \tab Hessian matrix at the
+  maxima.\cr pt \tab Logical indicating whether the data
+  were from a point transect survey.\cr data \tab Data
+  frame after truncation.\cr ftype \tab Type of detection
+  function.\cr ctrl.options \tab Options passed to
+  \code{\link{optim}}.\cr showit \tab Debug level.\cr
+  opt.method \tab Optimisation method used.\cr usegrad \tab
+  Were analytic gradients used?\cr model.formula \tab Model
+  formula.\cr mu \tab Per-observation effective trip
+  width/effective area of detection.\cr pa.vec \tab Vector
+  of per-observation detectabilities.\cr N \tab Estimate of
+  N in the covered area (Horvitz-Thompson).\cr pa \tab
+  Average detectability.\cr pars.se \tab Standard errors of
+  the parameters.\cr N.se \tab Standard error of the
+  Horvitz-Thompson estimate of the abundance.\cr pa.se \tab
+  Standard error of the average detectability.\cr aic \tab
+  AIC of the fitted model.\cr cvm \tab Cramer-von Mises GoF
+  test results. List containing: \code{p}, the p-value and
+  \code{W}, the test statistic.\cr ks \tab
+  Kolmogorov-Smirnov test results. List containing:
+  \code{p}, the p-value and \code{Dn}, the test statistic.
+  See \code{\link{mmds.gof}} for more information.\cr}
 }
-\seealso{ \code{\link{summary.ds.mixture}}, \code{\link{step.ds.mixture}},\code{\link{plot.ds.mixture}}, \code{\link{sim.mix}}, \code{\link{mmds.gof}},\code{\link{ds.mixture}}, \code{\link{mmds.gof}}, \code{\link{mmds.pars}}, \code{\link{step.ds.mixture}}}
-\keyword{Statistical Models, Distance Sampling}
+
+\section{Note}{
+  \code{ds.mixture} objects can be passed to
+  \code{\link{step.ds.mixture}} to select number of mixture
+  components based on AIC score.
+}
+\author{
+  David L. Miller
+}
+
